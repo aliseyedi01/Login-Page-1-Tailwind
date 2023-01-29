@@ -2,7 +2,7 @@
 
 <div >
  <a href="https://play.tailwindcss.com/rJtS1dxawE" target="_blank" rel="noreferrer">See online in Tailwind play</a><br><br>
- <a href="https://codepen.io/aliseyedi1/pen/QWBBQQP" target="_blank" rel="noreferrer">See online in Code Pen</a>
+ <a href="https://codepen.io/aliseyedi1/full/QWBBQQP" target="_blank" rel="noreferrer">See online in Code Pen</a>
  </div>
  
 
