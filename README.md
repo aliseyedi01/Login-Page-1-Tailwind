@@ -1,7 +1,8 @@
 ## login page 1
 
 <div >
- <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="25" height="25"/> <a href="https://play.tailwindcss.com/rJtS1dxawE" target="_blank" rel="noreferrer">See online in Tailwind play</a>
+ <a href="https://play.tailwindcss.com/rJtS1dxawE" target="_blank" rel="noreferrer">See online in Tailwind play</a><br><br>
+ <a href="https://codepen.io/aliseyedi1/pen/QWBBQQP" target="_blank" rel="noreferrer">See online in Code Pen</a>
  </div>
  
 
