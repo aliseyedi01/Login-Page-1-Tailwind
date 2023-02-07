@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
     <script src="https://kit.fontawesome.com/b1830532cb.js" crossorigin="anonymous"></script>
     <title>Login Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- background -->
     <div class="flex justify-center items-center h-screen bg-center relative bg-indigo-900 dark:bg-black">
-        <!-- button dark mode -->
-        <button
-            class="absolute top-5 right-5 w-10 h-5 md:w-12 md:h-6 rounded-2xl bg-white flex items-center transition duration-300 focus:outline-none shadow  ">
-            <!-- icon sun -->
-            <div id="switch-toggle"
-                class="w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white flex justify-center items-center"
-                onclick="toggleTheme()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path
-                        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
-                </svg>
-
-            </div>
-        </button>
-        <!-- circles -->
-        <span
-            class=" h-[150px] md:h-[200px] w-[150px] md:w-[200px]  bg-indigo-600 rounded-full inline-block absolute top-[40px] md:top-[2%] left-[2%] md:left-[28%]"></span>
-        <span
-            class=" h-[150px]  md:h-[200px]  w-[150px] md:w-[200px] bg-orange-600 rounded-full inline-block absolute bottom-[40px] md:bottom-[2%] right-[2%] md:right-[28%]"></span>
-        <!-- control form main -->
+      <!-- button dark mode -->
+      <button class="absolute top-5 right-5 w-10 h-5 md:w-12 md:h-6 rounded-2xl bg-white flex items-center transition duration-300 focus:outline-none shadow">
+        <!-- icon sun -->
         <div
-            class=" w-full max-w-sm p-4 bg-white bg-opacity-10  dark:shadow-sm dark:shadow-red-600 backdrop-blur-lg dark:bg-opacity-40 drop-shadow-lg  rounded-lg  sm:p-6 md:p-8   dark:bg-gray-800 dark:border-gray-700">
-            <!-- form main -->
-            <form class="space-y-6  " action="#">
-
-                <!-- header login -->
-                <h5 class="text-2xl font-medium  text-blue-300 dark:text-white text-center block">Login Here</h5>
-                <!-- user name -->
-                <div>
-                    <label for="email"
-                        class="block mb-2 text-base font-medium capitalize text-indigo-300 peer-focus-within:text-red-400  dark:text-white">username</label>
-                    <input autocomplete="none" type="email" name="email" id="email"
-                        class="bg-sky-900 border focus:bg-indigo-900 border-indigo-400 dark:bg-purple-900 text-yellow-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-500 dark:placeholder-yellow-500 dark:text-white peer"
-                        placeholder="Email or Phone" required>
-                </div>
-                <!-- Password -->
-                <div>
-                    <label for="password " id="lb1"
-                        class="block mb-2 text-sm font-medium   text-indigo-300 capitalize  dark:text-white">password</label>
-                    <input type="password" name="password" id="password" placeholder="Password"
-                        class="bg-sky-900  focus:bg-indigo-900 border-indigo-400 border dark:bg-purple-900   text-yellow-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-500 dark:placeholder-yellow-500 dark:text-white "
-                        required>
-                </div>
-                <!-- button log in  -->
-                <button type="submit"
-                    class="w-full text-indigo-800 hover:text-yellow-200 bg-indigo-300    dark:text-white/75  hover:bg-blue-500 focus:ring-4 focus:border-yellow-100 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
-                </button>
-                <!-- button facebook & google  -->
-                <div class="w-full flex gap-6 justify-between">
-                    <!-- button google -->
-                    <button type="submit"
-                        class="w-full hover:text-yellow-200 bg-indigo-300 hover:bg-blue-500 focus:ring-4 dark:text-white/75 focus:outline-none focus:ring-blue-300 text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <i class='fab fa-google  dark:text-yellow-400' style="margin-right: 3px;"></i>
-                        Google
-                    </button>
-                    <!-- button facebook -->
-                    <button type="submit"
-                        class="w-full   bg-indigo-300 hover:bg-blue-500 hover:text-yellow-200 focus:ring-4  dark:text-white/75 focus:outline-none text-indigo-900 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <i class='fab fa-facebook dark:text-yellow-400' style="margin-right: 3px;"></i>
-                        Facebook
-                    </button>
-                </div>
-            </form>
-
+          id="switch-toggle"
+          class="w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white flex justify-center items-center"
+          onclick="toggleTheme()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path
+              d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+            />
+          </svg>
         </div>
+      </button>
+      <!-- circles -->
+      <span
+        class="h-[150px] md:h-[200px] w-[150px] md:w-[200px] bg-indigo-600 rounded-full inline-block absolute top-[40px] md:top-[2%] left-[2%] md:left-[28%]"
+      ></span>
+      <span
+        class="h-[150px] md:h-[200px] w-[150px] md:w-[200px] bg-orange-600 rounded-full inline-block absolute bottom-[40px] md:bottom-[2%] right-[2%] md:right-[28%]"
+      ></span>
+      <!-- control form main -->
+      <div
+        class="w-full max-w-sm p-4 bg-white bg-opacity-10 dark:shadow-sm dark:shadow-red-600 backdrop-blur-lg dark:bg-opacity-40 drop-shadow-lg rounded-lg sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+      >
+        <!-- form main -->
+        <form class="space-y-6" action="#">
+          <!-- header login -->
+          <h5 class="text-2xl font-medium text-blue-300 dark:text-white text-center block">Login Here</h5>
+          <!-- user name -->
+          <div>
+            <label for="email" class="block mb-2 text-base font-medium capitalize text-indigo-300 peer-focus-within:text-red-400 dark:text-white"
+              >username</label
+            >
+            <input
+              autocomplete="none"
+              type="email"
+              name="email"
+              id="email"
+              class="bg-sky-900 border focus:bg-indigo-900 border-indigo-400 dark:bg-purple-900 text-yellow-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-yellow-500 dark:text-white peer"
+              placeholder="Email or Phone"
+              required
+            />
+          </div>
+          <!-- Password -->
+          <div>
+            <label for="password " id="lb1" class="block mb-2 text-sm font-medium text-indigo-300 capitalize dark:text-white">password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="bg-sky-900 focus:bg-indigo-900 border-indigo-400 border dark:bg-purple-900 text-yellow-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-yellow-500 dark:text-white"
+              required
+            />
+          </div>
+          <!-- button log in  -->
+          <button
+            type="submit"
+            class="w-full text-indigo-800 hover:text-yellow-200 bg-indigo-300 dark:text-white/75 hover:bg-blue-500 focus:ring-4 focus:border-yellow-100 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Login
+          </button>
+          <!-- button facebook & google  -->
+          <div class="w-full flex gap-6 justify-between">
+            <!-- button google -->
+            <button
+              type="submit"
+              class="w-full hover:text-yellow-200 bg-indigo-300 hover:bg-blue-500 focus:ring-4 dark:text-white/75 focus:outline-none focus:ring-blue-300 text-indigo-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <i class="fab fa-google dark:text-yellow-400" style="margin-right: 3px"></i>
+              Google
+            </button>
+            <!-- button facebook -->
+            <button
+              type="submit"
+              class="w-full bg-indigo-300 hover:bg-blue-500 hover:text-yellow-200 focus:ring-4 dark:text-white/75 focus:outline-none text-indigo-900 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <i class="fab fa-facebook dark:text-yellow-400" style="margin-right: 3px"></i>
+              Facebook
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-<script>
-    const switchToggle = document.querySelector('#switch-toggle');
-    const html = document.querySelector('html');
+  </body>
+  <script>
+    const switchToggle = document.querySelector("#switch-toggle");
+    const html = document.querySelector("html");
     let isDarkMode = false;
     const darkIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
             <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
@@ -91,26 +110,25 @@
             <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
             </svg>`;
     function toggleTheme() {
-        isDarkMode = !isDarkMode;
-        switchTheme();
+      isDarkMode = !isDarkMode;
+      switchTheme();
     }
     function switchTheme() {
-        if (isDarkMode) {
-            html.classList.add('dark');
-            switchToggle.classList.remove('bg-yellow-500', '-translate-x-2');
-            switchToggle.classList.add('bg-gray-700', 'translate-x-full');
-            setTimeout(() => {
-                switchToggle.innerHTML = darkIcon;
-            }, 250);
-        } else {
-            html.classList.remove('dark');
-            switchToggle.classList.add('bg-yellow-500', '-translate-x-2');
-            switchToggle.classList.remove('bg-gray-700', 'translate-x-full');
-            setTimeout(() => {
-                switchToggle.innerHTML = lightIcon;
-            }, 250);
-        }
+      if (isDarkMode) {
+        html.classList.add("dark");
+        switchToggle.classList.remove("bg-yellow-500", "-translate-x-2");
+        switchToggle.classList.add("bg-gray-700", "translate-x-full");
+        setTimeout(() => {
+          switchToggle.innerHTML = darkIcon;
+        }, 250);
+      } else {
+        html.classList.remove("dark");
+        switchToggle.classList.add("bg-yellow-500", "-translate-x-2");
+        switchToggle.classList.remove("bg-gray-700", "translate-x-full");
+        setTimeout(() => {
+          switchToggle.innerHTML = lightIcon;
+        }, 250);
+      }
     }
-</script>
-
+  </script>
 </html>
